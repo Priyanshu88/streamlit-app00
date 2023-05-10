@@ -175,7 +175,7 @@ if __name__ == '__main__':
     # INPUTS
     img_size = 640
     path_yolov7_weights = "weights/best.pt"
-    path_img_i = r"test_images/DJI_0028_fps24_frame00000040.jpg"
+    path_img_i = r"test_image.jpg"
 
     # INITIALIZE THE app
     app = SingleInference_YOLOV7(img_size, path_yolov7_weights,

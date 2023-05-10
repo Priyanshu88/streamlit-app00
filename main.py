@@ -21,7 +21,7 @@ class Streamlit_YOLOV7(SingleInference_YOLOV7):
 
     def main(self):
         st.title('Custom YoloV7 Object Detector')
-        st.subheader(""" Upload an image and run YoloV7 on it. This Model was Trained to Detect the Following Classes from Digital Architectural Floor Plans. Notice where the model fails. (i.e. objects too close up & too far away):\n""")
+        st.subheader(""" Upload an image and run YoloV7 on it. This Model was Trained to Detect the Following Classes from Digital Architectural Floor Plans.\n""")
         text_i_list = []
         for i, name_i in enumerate(self.names):
             text_i_list.append(f'{i}: {name_i}\n')
