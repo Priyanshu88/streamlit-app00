@@ -9,7 +9,7 @@ from io import BytesIO
 import numpy as np
 import cv2
 
-
+@st.cache(persist=True)
 class Streamlit_YOLOV7(SingleInference_YOLOV7):
 
     def __init__(self,):
