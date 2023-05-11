@@ -21,13 +21,13 @@ class Streamlit_YOLOV7(SingleInference_YOLOV7):
 
     def main(self):
         st.title('Custom YoloV7 Object Detector')
-        st.subheader(""" Upload an image and run YoloV7 on it. This Model was Trained to Detect the Following Classes from Digital Architectural Floor Plans.\n""")
+        st.subheader("""Upload an image and run YoloV7 on it. This Model was Trained to Detect the Following Classes from Digital Architectural Floor Plans.\n""")
         text_i_list = []
         for i, name_i in enumerate(self.names):
             text_i_list.append(f'{i}: {name_i}\n')
         st.selectbox('Classes', tuple(text_i_list))
         self.conf_selection = st.selectbox('Confidence Threshold', tuple([0.1, 0.25, 0.5, 0.75, 0.95]))
-        st.markdown('YoloV7 on streamlit.  Demo of object detection with YoloV7 with a web application.')
+        st.markdown('YoloV7 on streamlit. Demo of object detection with YoloV7 with a web application.')
         self.load_image_st()
         predictions = st.button('Predict on the image?')
         if predictions:
